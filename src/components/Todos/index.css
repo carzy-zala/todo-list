@@ -1,0 +1,29 @@
+.todo-container{
+    margin: 10px auto;
+    width: 350px;
+}
+
+.todo-items{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.task-btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-dlt-btn{
+    padding: 2px 8px;
+    margin-left: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    width:20px;
+}

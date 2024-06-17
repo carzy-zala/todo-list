@@ -1,0 +1,23 @@
+.todo-input{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+   text-align: center; 
+}
+
+#add-todo-input{
+    font-size: 1.2em;
+    padding: 5px 10px;
+    margin-right: 10px ;
+}
+
+#add-todo-btn{
+    font-size: 1.3em;
+    padding: 5px 10px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+}
