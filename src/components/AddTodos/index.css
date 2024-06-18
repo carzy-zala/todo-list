@@ -1,6 +1,6 @@
 .todo-input{
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     width: 350px;
     margin: auto;
 }
