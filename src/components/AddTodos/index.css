@@ -1,5 +1,7 @@
 .todo-input{
-      margin: auto;
+    display: flex;
+    justify-content: center;
+    
 }
 
 h1{
