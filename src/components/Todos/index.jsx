@@ -1,18 +1,39 @@
 import React from "react";
 import "./index.css";
-import {useSelector} from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
+import { deleteTask, toggleTask } from "../../action";
 
 function Todos() {
-  const todos = useSelector(store => store.todo)
+  const todos = useSelector((store) => store.todo);
+  const dispatch = useDispatch();
+
+  const handleDoneTask = (index) => {
+    dispatch(toggleTask(index));
+  };
+
+  const handleDeleteTodo = (index) => {
+    dispatch(deleteTask(index));
+  };
 
   return (
     <div className="todo-container">
-      {todos.map((todo, index) => (
-        <div className="todo-items">
-          <div key={index}>{todo.value}</div>
+      {todos.map((todoData, index) => (
+        <div key={index} className="todo-items">
+          <div
+            style={{
+              textDecorationLine: todoData.checked ? "line-through" : "none",
+            }}
+          >
+            {todoData.value}{" "}
+          </div>
           <div className="task-btn">
-            <input type="checkbox" />
-            <button className="task-dlt-btn" >X</button>
+            <input onChange={() => handleDoneTask(index)} type="checkbox" />
+            <button
+              className="task-dlt-btn"
+              onClick={() => handleDeleteTodo(index)}
+            >
+              X
+            </button>
           </div>
         </div>
       ))}
